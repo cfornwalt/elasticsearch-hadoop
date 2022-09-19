@@ -118,7 +118,7 @@ public class Resource {
         if (typeExists) {
             index = res.substring(0, slash);
             type = res.substring(slash + 1);
-            typed = true;
+            typed = !UNDERSCORE_DOC.equals(type);
             Assert.hasText(type, "No type found; expecting [index]/[type]");
         } else {
             index = res;
